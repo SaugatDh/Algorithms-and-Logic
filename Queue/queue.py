@@ -24,10 +24,12 @@ class Queue:
         if self.isEmpty():
             return "Queue is empty"
         nodetodelete = self.front
+        # pyrefly: ignore [missing-attribute]
         self.front = nodetodelete.next
         self.length -= 1
         if self.front is None:
             self.rear = None
+        # pyrefly: ignore [missing-attribute]
         return nodetodelete.data
 
 
@@ -46,6 +48,7 @@ class Queue:
     def peek(self):
         if self.isEmpty():
             return "Queue is empty"
+        # pyrefly: ignore [missing-attribute]
         return self.front.data
 
 #%%

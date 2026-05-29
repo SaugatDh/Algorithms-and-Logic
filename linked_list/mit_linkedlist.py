@@ -33,12 +33,14 @@ class Linked_List_Seq:
     def get_at(self,i):
         if i<0 or i>=self.size:
             raise IndexError("Linked List index out of range.")
+        # pyrefly: ignore [missing-attribute]
         node = self.head.later_node(i)
         return node.item
 
     def set_at(self,i,x):
         if i<0 or i>=self.size:
             raise IndexError("Linked List index out of range.")
+        # pyrefly: ignore [missing-attribute]
         node = self.head.later_node(i)
         node.item = x
 
@@ -51,7 +53,9 @@ class Linked_List_Seq:
     def delete_first(self):
         if self.size == 0:
             raise IndexError("Cannot delete from an empty linked list.")
+        # pyrefly: ignore [missing-attribute]
         x = self.head.item
+        # pyrefly: ignore [missing-attribute]
         self.head = self.head.next
         self.size -= 1
         return x
@@ -63,6 +67,7 @@ class Linked_List_Seq:
             self.insert_first(x)
             return
         new_node = Node(x)
+        # pyrefly: ignore [missing-attribute]
         pred_node = self.head.later_node(i-1)
         new_node.next = pred_node.next
         pred_node.next = new_node
@@ -73,6 +78,7 @@ class Linked_List_Seq:
         if i == 0:
             return self.delete_first()
 
+        # pyrefly: ignore [missing-attribute]
         pred_node = self.head.later_node(i-1)
         target_node = pred_node.next
         x=target_node.item

@@ -20,13 +20,16 @@ class Stack:
         if self.isEmpty():
             return "Stack is empty"
         popped_node = self.head
+        # pyrefly: ignore [missing-attribute]
         self.head = self.head.next
         self.size -= 1
+        # pyrefly: ignore [missing-attribute]
         return popped_node.value
     
     def peek(self):
         if self.isEmpty():
             return "Stack is empty"
+        # pyrefly: ignore [missing-attribute]
         return self.head.value
     
     def isEmpty(self):
