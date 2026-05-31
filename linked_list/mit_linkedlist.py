@@ -140,9 +140,7 @@ if __name__ == "__main__":
     print(f"New length: {len(li)}")                      # Expected: 6
     print("-" * 50)
 
-    # ----------------------------------------------------------------
-    # 7. Test: delete_at()
-    # ----------------------------------------------------------------
+
     print("--- 7. Testing delete_at() ---")
     print(f"Before structural deletion: {list(li)}")
     # Deleting index 2 (value 99)
@@ -151,10 +149,6 @@ if __name__ == "__main__":
     print(f"After deleting index 2: {list(li)}")          # Expected: [6, 2, 55, 4, 0]
     print(f"New length: {len(li)}")                       # Expected: 5
     print("-" * 50)
-
-    # ----------------------------------------------------------------
-    # 8. Test: insert_last()
-    # ----------------------------------------------------------------
     print("--- 8. Testing insert_last() ---")
     print(f"Before appending: {list(li)}")
     li.insert_last(88)
@@ -162,9 +156,7 @@ if __name__ == "__main__":
     print(f"New length: {len(li)}")                    # Expected: 6
     print("-" * 50)
 
-    # ----------------------------------------------------------------
-    # 9. Test: delete_last()
-    # ----------------------------------------------------------------
+ 
     print("--- 9. Testing delete_last() ---")
     print(f"Before popping tail: {list(li)}")
     deleted_tail = li.delete_last()
@@ -173,9 +165,7 @@ if __name__ == "__main__":
     print(f"Final length: {len(li)}")                   # Expected: 5
     print("-" * 50)
 
-    # ----------------------------------------------------------------
-    # 10. Test: Defensive Guardrails & Index Errors
-    # ----------------------------------------------------------------
+ 
     print("--- 10. Testing Bounds Checking (Defensive Exceptions) ---")
     print("Attempting to read out-of-bounds index 99...")
     try:
@@ -188,7 +178,3 @@ if __name__ == "__main__":
         li.delete_at(-1)
     except IndexError as e:
         print(f"Successfully caught expected error: {e}")
-        
-    print("\n==================================================")
-    print("          ALL STRUCTURAL TESTS COMPLETE           ")
-    print("==================================================")
